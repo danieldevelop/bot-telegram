@@ -4,10 +4,11 @@ $token = "6024389131:AAEFZNhv9-A95f0eQNezYs7rJ8gNwlonmaw"; // token (id u contra
 $website = "https://api.telegram.org/bot".$token;
 
 $input = file_get_contents('php://input'); // recibe la informacion de la url, en formato json
-$update = json_decode($update, TRUE); // decodifica la informacion recibida
+$update = json_decode($input, TRUE); // decodifica la informacion recibida
 
-$chatId = $update["message"]["chat"]["id"]; 
-$message = $update["message"]["text"];
+$chatId = $update["message"]["chat"]["id"]; // viene con este el formato el json
+$message = $update["message"]["text"]; // realizamos la actualizacion del mensaje
+
 
 switch ($message) {
     case '/start':
@@ -26,11 +27,11 @@ switch ($message) {
         break;
 
     case strtolower('Como me ira en la sumativa'):
-        $response = 'te ira super bien si realizas los ejercicios';
+        $response = 'Te ira super bien si realizas los ejercicios';
         sendMessage($chatId, $response);
         break;
 
-    case '!Adios bot':
+    case strtolower('Adios bot'):
         $response = "Hasta luego";
         sendMessage($chatId, $response);
         break;
