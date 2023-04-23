@@ -10,6 +10,15 @@ $chatId = $update["message"]["chat"]["id"]; // viene con este el formato el json
 $message = $update["message"]["text"]; // realizamos la actualizacion del mensaje
 
 
+/**
+ * Se agrega posibles mensajes de los usuarios y respuestas del bot
+ * es importante que el mensaje del usuario sea en minuscula, pero 
+ * se puede mejorar
+ * 
+ * @param $chatId
+ * @param $response
+ * @return mixed
+ */
 switch ($message) {
     case '/start':
         $response = "Bienvenido al bot de prueba";
@@ -41,6 +50,15 @@ switch ($message) {
         sendMessage($chatId, $response);
 }
 
+
+/**
+ * Funcion que envia el mensaje al usuario y este lo responde en el chat, segun lo que se le indique
+ * en el parametro $response (lo que se le quiere decir al bot)
+ *
+ * @param $chatId
+ * @param $response
+ * @return mixed
+ */
 function sendMessage($chatId, $response){
     $url = $GLOBALS['website']."/sendMessage?chat_id=".$chatId."&parse_mode=HTML&text=".urlencode($response);
     file_get_contents($url);
