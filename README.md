@@ -11,8 +11,11 @@ Programa bot de telegram para mesajeria, modulo de automatizacon AIEP
 
 ## Activacion
 
-```https://api.telegram.org/bot6024389131:AAEFZNhv9-A95f0eQNezYs7rJ8gNwlonmaw/setWebhook?url=https://danieldevelopjunior.000webhostapp.com/bot.php```
+Para activar el bot de telegram, haga click en **Activar bot**
+    
+[Activar bot](https://api.telegram.org/bot6024389131:AAEFZNhv9-A95f0eQNezYs7rJ8gNwlonmaw/setWebhook?url=https://example.com/bot.php)
 
+----
 
 ## License
 
