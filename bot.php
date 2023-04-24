@@ -1,8 +1,6 @@
 <?php
 
-//$token = "6024389131:AAEFZNhv9-A95f0eQNezYs7rJ8gNwlonmaw"; // token (id u contraseña) de acceso para el bot
-$token_osvaldo = "6106156912:AAFBBBxuTWTIKJNyYpguOsLbKxOuVWqS8qU";
-$website = "https://api.telegram.org/bot".$token_osvaldo;
+$website = "https://api.telegram.org/bot".$token;
 
 $input = file_get_contents('php://input'); // recibe la informacion de la url, en formato json
 $update = json_decode($input, TRUE); // decodifica la informacion recibida
