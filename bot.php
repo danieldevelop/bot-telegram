@@ -25,28 +25,74 @@ switch ($message) {
         sendMessage($chatId, $response);
         break;
 
-    case strtolower('Hola bot'):
-        $response = "Hola, ¿como estas?";
+    case strtolower('¿Donde hay carne?'):
+        $response = "Pasillo 1";
         sendMessage($chatId, $response);
         break;
 
-    case strtolower('Que tal bot'):
-        $response = "Muy bien, ¿y tu?";
+    case strtolower('¿Donde hay queso?'):
+        $response = "Pasillo 1";
         sendMessage($chatId, $response);
         break;
 
-    case strtolower('Como me ira en la sumativa'):
-        $response = 'Te ira super bien si realizas los ejercicios';
+    case strtolower('¿Donde hay jamon?'):
+        $response = "Pasillo 1";
         sendMessage($chatId, $response);
         break;
 
-    case strtolower('Adios bot'):
-        $response = "Hasta luego";
+    case strtolower('¿Donde hay leche?'):
+        $response = "Pasillo 2";
         sendMessage($chatId, $response);
         break;
+
+    case strtolower('¿Donde hay yogurth?'):
+        $response = "Pasillo 2";
+        sendMessage($chatId, $response);
+        break;
+
+    case strtolower('¿Donde hay Cereal?'):
+        $response = "Pasillo 2";
+        sendMessage($chatId, $response);
+        break;
+
+    case strtolower('¿Donde hay bedidas?'):
+        $response = "Pasillo 3";
+        sendMessage($chatId, $response);
+        break;
+
+    case strtolower('¿Donde hay jugos?'):
+        $response = "Pasillo 3";
+        sendMessage($chatId, $response);
+        break;
+
+    case strtolower('¿Donde hay pan?'):
+        $response = "Pasillo 4";
+        sendMessage($chatId, $response);
+        break;
+
+    case strtolower('¿Donde hay pasteles?'):
+        $response = "Pasillo 4";
+        sendMessage($chatId, $response);
+        break;
+
+    case strtolower('¿Donde hay tortas?'):
+        $response = "Pasillo 4";
+        sendMessage($chatId, $response);
+        break;
+    
+    case strtolower('¿Donde hay detergente?'):
+        $response = "Pasillo 5";
+        sendMessage($chatId, $response);
+        break;
+
+    case strtolower('¿Donde hay lavaloza?'):
+        $response = "Pasillo 5";
+        sendMessage($chatId, $response);
+        break;
+
 
     default:
-        $response = "No te entiendo";
+        $response = "No te entiendo la pregunta, intenta con otra";
         sendMessage($chatId, $response);
 }
 
